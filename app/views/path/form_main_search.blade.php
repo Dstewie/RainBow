@@ -6,7 +6,7 @@
 				<div class="f-item" >
 					<input type="radio" name="radio" id="hotel" value="form1" />
 					<label for="hotel">Велосипедные туры</label>
-				</div>
+				</div><br>
 				<div class="f-item">
 					<input type="radio" name="radio" id="self_catering" value="form2" />
 					<label for="self_catering">Зимние маршруты</label>

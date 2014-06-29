@@ -591,7 +591,7 @@ input.error 	{border-color:red !important;}
 label.error	{color:red !important;padding:5px 0 0;}
 
 /*MAIN SEARCH*/
-.main-search 			{margin:-250px auto 45px;position:relative;z-index:999;width: 100%;max-width: 1140px;text-align:left;height:202px;}
+.main-search 			{margin:0 auto;position:relative;z-index:999;width: 100%;max-width: 1140px;text-align:left;height:202px;}
 .main-search form 		{position:relative;width:100%;display:inline-block;padding:20px 0 10px;border:1px solid #fff;box-shadow:0 0 3px rgba(0,0,0,0.2);-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);background: rgb(255,255,255);background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(242,242,242,1)));background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(242,242,242,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 );}
 .main-search h4			{font:normal 1.6em 'OpenSansRegular';letter-spacing:0;}
 .main-search h4 span		{font-family:'ChunkFiveRegular';color:#3FBFB8;}
@@ -610,7 +610,7 @@ label.error	{color:red !important;padding:5px 0 0;}
 .main-search .f-item select				{width:100%;}
 	
 .main-search .radios			{width:22%;background:none;padding:0;margin:0 0 0 1.5%;}
-.main-search .radios .f-item 	{width:125px;}
+.main-search .radios .f-item 	{width:100%;}
 .main-search .radios label 	{padding:0 0 0 5px;color:#999;line-height:20px;width:100px;}
 .main-search .active label		{color:#666;}
 
