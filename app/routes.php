@@ -11,8 +11,16 @@
 |
 */
 
-Route::controller('/', 'IndexController');
+Route::group(array('before'=>'un_auth'), function(){
+		Route::get('login', array('as' => 'login.index', 'uses' => 'LoginController@index'));
+		Route::get('register', array('as' => 'login.register', 'uses' => 'LoginController@register'));
+		Route::post('login', 'LoginController@login');
+		Route::post('register', 'LoginController@store');
+	}
+);
 
-Route::get('/test', function(){
-	return App::environment();
-});
+Route::resource('login', 'LoginController');
+
+Route::resource('countries', 'CountriesController');
+
+Route::controller('/', 'IndexController');

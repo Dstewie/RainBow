@@ -21,31 +21,32 @@
 	<script type="text/javascript" src="js/sequence.js"></script>
 	<script type="text/javascript" src="js/selectnav.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>	
-	<script type="text/javascript">	
-		$(document).ready(function(){
-			$(".form").hide();
-			$(".form:first").show();
-			$(".f-item:first").addClass("active");
-			$(".f-item:first span").addClass("checked");
-		});
-	</script>
 </head>
 <body>
 	<!--header-->
-@yield('header')
-	<!--//header-->
-@yield('slider')	
-	<!--search-->
-@yield('main_search')
-	<!--//search-->
-	<!--main-->
+	<header>
+		<div class="wrap clearfix">
+			<!--logo-->
+			<h1 class="logo"><a href="index.html" title="Book Your Travel - home"><img src="images/txt/logo.png" alt="Book Your Travel" /></a><br>Редактирование сайта Велоклуб Радуга</h1>
+			<!--//logo-->		
+		<!--main navigation-->
+		<nav class="main-nav" role="navigation" id="nav">
+			<ul class="wrap">
+				<li><a href="/" title="console">Панель управления</a></li>
+			</ul>
+		</nav>
+		<!--//main navigation-->
+	</header>
 @yield('content')
-	<!--footer-->
-@yield('footer')
-	<!--//footer-->
-	<script>
-		// Initiate selectnav function
-		selectnav();
-	</script>
+<!--footer-->
+	<footer>
+		<div class="wrap clearfix">
+			<!--column-->
+			<article class="one-fourth">
+				<h3>Book Your Travel</h3>
+				<p>1400 Pennsylvania Ave. Washington, DC</p>
+				<p><em>P:</em> 24/7 customer support: 1-555-555-5555</p>
+				<p><em>E:</em> <a href="#" title="booking@mail.com">booking@mail.com</a></p>
+			</article>
 </body>
 </html>

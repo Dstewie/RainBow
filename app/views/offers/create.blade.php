@@ -1,0 +1,1 @@
+C:\Server\OpenServer\domains\rainbow\app/views/offers/create.blade.php
