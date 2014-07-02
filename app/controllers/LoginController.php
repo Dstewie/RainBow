@@ -19,12 +19,8 @@ class LoginController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function login()
-	{
-		//return View::make('login.index');
-	}
-	
-	public function register(){
+
+	public function registration(){
 		
 		return View::make('login.registr');
 	
@@ -47,14 +43,22 @@ class LoginController extends BaseController {
 		
 		$validator = Validator::make(Input::all(), $rules);
 		
-		if($validator->fails){
-			return Redirect::back()->whitInput()->whitErrors($validator);
+		if($validator->fails()){
+			return Redirect::back()->withInput()->withErrors($validator);
 		}
 		
 		$user = new User;
 		$user->email = Input::get('email');
 		$user->username = Input::get('u_name');
 		$user->password = Hash::make(Input::get('password'));
+		
+		return View::make('login.main');
+	}
+	
+	public function login(){
+		if (Auth::attempt(array(username => 'u_name', password => 'password', true))){
+			return View::make();
+		}
 	}
 
 	/**
