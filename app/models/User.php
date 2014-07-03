@@ -21,6 +21,42 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password', 'remember_token');
+	protected $hidden = array(
+		'password',
+		'remember_token'
+	);
+	
+	/**
+	 * Data label from forms.
+	 *
+	 * @var array
+	 */
+	
+	protected $fillable = array(
+		'username',
+		'email',
+		'password',
+		'remember_token'
+	);
+	
+	protected $guarded = array(
+		'id',
+		'create_at',
+		'update_at'
+	);
+	
+	public static function getValidate(){
+		$validation = array(
+			'username' => 'required|alpha_num|between:3,10|unique:users,username',
+			'password' => 'required|alpha_num|between:3,10',
+			'email' => 'required|email|unique:users,email'
+		);
+		
+		return $validation;
+	}
+	
+	
+	
+	
 
 }

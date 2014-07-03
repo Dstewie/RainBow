@@ -10,12 +10,12 @@
 			{{Form::open(array('route'=>'login.index', 'method'=>'POST'))}}
 					<h1>Вход</h1>
 					<div class="f-item">
-						<label for="email">Логин</label>
-						<input type="email" id="email" name="email" />
+						{{Form::label('username', 'Логин')}}
+						{{Form::text('username')}}
 					</div>
 					<div class="f-item">
-						<label for="password">Пароль</label>
-						<input type="password" id="password" name="password" />
+						{{Form::label('password', 'Пароль')}}
+						{{Form::password('password')}}
 					</div>
 					<input type="submit" id="login" name="login" value="Вход" class="gradient-button"/>
 			{{Form::close()}}

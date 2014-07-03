@@ -11,8 +11,8 @@
 				{{Form::open(array('route'=>'login.registration', 'method'=>'POST'))}}
 					<h1>Регистрация</h1>
 					<div class="f-item">
-						{{Form::label('u_name', 'Login')}}
-						{{Form::text('u_name')}}
+						{{Form::label('username', 'Login')}}
+						{{Form::text('username')}}
 					</div>
 					<div class="f-item">
 						{{Form::label('email', 'E-mail')}}
@@ -24,6 +24,9 @@
 					</div>
 					<input type="submit" id="register" name="register" value="Зарегистрироваться" class="gradient-button"/>
 				{{Form::close()}}
+				@foreach($errors->all() as $error)
+					{{$error}}
+				@endforeach
 			</div>
 		</div>
 

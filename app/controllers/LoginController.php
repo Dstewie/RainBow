@@ -34,30 +34,27 @@ class LoginController extends BaseController {
 	 */
 	 
 	public function store()
-	{
-		$rules = array(
-			'u_name' => 'required|alpha_num|between:3,10|unique:users,username',
-			'email' => 'required|email|unique:users,email',
-			'password' => 'required|alpha_num|between:4,12'
-		);
-		
-		$validator = Validator::make(Input::all(), $rules);
+	{		
+		$validator = Validator::make(Input::all(), User::getValidate());
 		
 		if($validator->fails()){
 			return Redirect::back()->withInput()->withErrors($validator);
 		}
 		
 		$user = new User;
-		$user->email = Input::get('email');
-		$user->username = Input::get('u_name');
+		$user->username = Input::get('username');
 		$user->password = Hash::make(Input::get('password'));
+		$user->email = Input::get('email');
+		$user->save();
 		
-		return View::make('login.main');
+		return 'добавлен пользователь '.$user->id;
+		
+		
 	}
 	
 	public function login(){
-		if (Auth::attempt(array(username => 'u_name', password => 'password', true))){
-			return View::make();
+		if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password'), true))){
+			return Redirect::intended('login.main');
 		}
 	}
 

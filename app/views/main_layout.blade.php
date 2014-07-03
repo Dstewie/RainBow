@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 	<script type="text/javascript" src="js/sequence.jquery-min.js"></script>
-	<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery.uniform.min.js"></script>-->
 	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 	<script type="text/javascript" src="js/sequence.js"></script>
 	<script type="text/javascript" src="js/selectnav.js"></script>
